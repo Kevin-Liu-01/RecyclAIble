@@ -7,7 +7,7 @@ function DbCounter(props) {
     <div className="col-span-6 lg:col-span-3 relative flex justify-center  bg-gradient-to-b to-plantGreenDark from-plantGreen rounded-3xl  drop-shadow-lg  overflow-hidden ">
       <div className=" bg-[url('../assets/leaves-bg.jpg')] bg-contain opacity-20 h-full w-full absolute "></div>
 
-      <div className="justify-center mx-auto z-10">
+      <div className="justify-center  z-10">
         <div className="mx-4 text-3xl leading-8 font-extrabold tracking-tight text-plantGreenLight sm:text-4xl text-center mt-12 ">
           Global Recycling Metrics
         </div>

@@ -19,9 +19,9 @@ function DbLast(props) {
             }
           ></div>
 
-          <div className="z-20 text-center my-auto relative lg:text-5xl select-none">
+          <div className="z-20 text-center my-auto relative lg:text-5xl font-extrabold select-none">
             {lastElement[2] == "yes" ? "Recycled" : "Disposed"}
-            <div className="z-20 mt-2 font-[600] text-center block my-auto relative lg:text-sm select-none">
+            <div className="z-20 mt-2 font-[600] text-center block my-auto relative text-sm select-none">
               Click to scan a new one!
             </div>
           </div>

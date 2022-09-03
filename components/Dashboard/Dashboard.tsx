@@ -41,7 +41,7 @@ function Home() {
       <Navbar page="Dashboard" />
       {/*Dashboard */}
 
-      <div className="p-10 md:p-16  grid grid-cols-6 gap-5">
+      <div className="py-10 px-7 md:px-16 md:py-16 grid grid-cols-6 gap-5">
         {/*header section */}
         <DBHeader recycled={itemsRecycled} disposed={itemsDisposed} />
 

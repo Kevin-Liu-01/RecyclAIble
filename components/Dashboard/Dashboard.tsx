@@ -5,7 +5,7 @@ import DBCounter from "./DbCounter";
 import DBPIE from "./DbPIE";
 import DBMetrics from "./DbMetrics";
 import DbLast from "./DbLastItem";
-import jQuery from "jquery";
+// import jQuery from "jquery";
 
 import React from "react";
 import { useState, useEffect } from "react";

@@ -7,7 +7,7 @@ import DBMetrics from "./DbMetrics";
 import React from "react";
 import { useState } from "react";
 function Home() {
-  const [itemsRecycled, setItemsRecycled] = useState(75);
+  const [itemsRecycled, setItemsRecycled] = useState(74);
   const [itemsDisposed, setItemsDisposed] = useState(88);
 
   return (

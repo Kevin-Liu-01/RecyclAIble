@@ -1,6 +1,7 @@
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import React from "react";
+import Image from "next/image";
 
 const navigation = [
   { name: "Dashboard", href: "/" },

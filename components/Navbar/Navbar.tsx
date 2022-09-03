@@ -17,7 +17,7 @@ function Navbar(props) {
   }
   return (
     <div className="bg-plantGreenLight py-8 drop-shadow-xl overflow-hidden">
-      <div className=" bg-[url('../assets/recyclingBG.jpg')] ml-[120px]  mt-[-30px] opacity-5 h-full w-full absolute "></div>
+      <div className=" bg-[url('../assets/recyclingBG.jpg')] ml-[129px]  mt-[-30px] opacity-5 h-full w-full absolute "></div>
 
       <Disclosure as="nav">
         {({ open }) => (

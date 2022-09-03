@@ -13,18 +13,28 @@ function DbCounter() {
         <div className="mb-9 relative flex mx-auto justify-center mt-9 drop-shadow-lg text-plantGreenLight h-48 w-48 md:h-96 md:w-96 bg-plantGreen border-4 border-plantGreenLight rounded-[50%] overflow-hidden">
           <div className="flex place-content-center bg-[url('../assets/trashcan.jpg')] bg-cover opacity-20 h-full w-full absolute "></div>
 
-          <div className="z-10 h-full w-full my-auto">
+          <div className="z-10 h-full w-full my-auto ">
             <PieChart
+              label={(props) => {
+                return props.dataEntry.title;
+              }}
+              className="font-extrabold text-md"
+              labelStyle={{
+                fontSize: "10px",
+                color: "red",
+              }}
               data={[
                 {
-                  title: "One",
-                  label: "hi",
-                  labelPosition: 50,
-                  value: 10,
+                  title: "Recycled",
+                  value: 45,
                   color: "#E38627",
                 },
-                { title: "Two", value: 15, color: "#C13C37" },
-                { title: "Three", value: 20, color: "#6A2135" },
+                {
+                  title: "Disposed",
+
+                  value: 75,
+                  color: "#C13C37",
+                },
               ]}
             />
             ;

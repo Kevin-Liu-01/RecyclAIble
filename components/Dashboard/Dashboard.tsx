@@ -2,8 +2,8 @@ import { ClockIcon, UserIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Navbar from "../Navbar/Navbar";
 import DBHeader from "./DbHeader";
 import DBCounter from "./DbCounter";
-import DBTBD from "./DbPIE";
-import DBTBN from "./DbMetrics";
+import DBPIE from "./DbPIE";
+import DBMetrics from "./DbMetrics";
 import React from "react";
 import { useState } from "react";
 function Home() {
@@ -25,10 +25,15 @@ function Home() {
         <DBCounter />
 
         {/* To be named */}
-        <DBTBD />
+        <DBPIE
+          rates={[
+            { title: "Recycled", value: 50 },
+            { title: "Disposed", value: 75 },
+          ]}
+        />
 
         {/* To be named */}
-        <DBTBN />
+        <DBMetrics />
       </div>
     </div>
   );

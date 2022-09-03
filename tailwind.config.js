@@ -11,7 +11,7 @@ module.exports = {
         plantGreen: "#008568",
         plantGreenDark: "#006751",
         plantGreenDarker: "#004b3a",
-        plantGreenMidDark: "005c48",
+        plantGreenMidDark: "#005c48",
         plantGreenLight: "#cdfff4",
         plantGreenLighter: "#00bc93",
       },

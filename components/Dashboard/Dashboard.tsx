@@ -26,7 +26,7 @@ function Home() {
   };
   useEffect(() => {
     axios
-      .get("https://402c-128-91-56-203.ngrok.io/sendUIdata")
+      .get("https://9f02-128-91-56-203.ngrok.io/sendUIdata")
       .then((response) => {
         console.log(`/client/ returned response from host: `, response.data);
         setData(response.data);
@@ -36,7 +36,7 @@ function Home() {
       });
   }, []);
   return (
-    <div className="min-h-screen bg-gradient-to-b to-plantGreenDarker from-plantGreenDark  pb-14 ">
+    <div className="min-h-screen bg-gradient-to-b to-plantGreenDarker from-plantGreenMidDark  pb-14 ">
       {/*Navbar*/}
       <Navbar page="Dashboard" />
       {/*Dashboard */}

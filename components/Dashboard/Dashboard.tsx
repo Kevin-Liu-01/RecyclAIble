@@ -16,6 +16,7 @@ function Home() {
   const [data, setData] = useState([
     [1, "bottle", "yes"],
     [2, "can", "yes"],
+    [3, "hat", "no"],
   ]);
   const config = {
     headers: {
@@ -40,14 +41,14 @@ function Home() {
       <Navbar page="Dashboard" />
       {/*Dashboard */}
 
-      <div className="p-10 md:p-16  grid grid-cols-6 gap-4">
+      <div className="p-10 md:p-16  grid grid-cols-6 gap-5">
         {/*header section */}
         <DBHeader recycled={itemsRecycled} disposed={itemsDisposed} />
 
         {/* Counter block */}
         <DBCounter recycled={itemsRecycled} disposed={itemsDisposed} />
 
-        <DbLast recycled={itemsRecycled} disposed={itemsDisposed} />
+        <DbLast data={data} recycled={itemsRecycled} disposed={itemsDisposed} />
         {/* To be named */}
         <DBPIE recycled={itemsRecycled} disposed={itemsDisposed} />
 

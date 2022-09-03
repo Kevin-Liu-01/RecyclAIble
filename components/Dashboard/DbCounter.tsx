@@ -11,7 +11,7 @@ function DbCounter(props) {
           How many items have you thrown away?
         </div>
         <div className="px-4 mb-9 relative flex mx-auto justify-center mt-9 drop-shadow-lg text-plantGreenLight h-48 w-48 lg:h-72 lg:w-72 text-2xl lg:text-4xl leading-8 font-bold tracking-tight  bg-plantGreen border-4 border-plantGreenLight rounded-[50%] overflow-hidden">
-          <div className="flex place-content-center bg-[url('../assets/trashcan.jpg')] bg-cover opacity-20 h-full w-full absolute "></div>
+          <div className="flex place-content-center bg-[url('../assets/trashcan.jpg')] bg-cover opacity-30 h-full w-full absolute "></div>
 
           <div className="z-20 text-center my-auto relative lg:text-5xl">
             <CountUp

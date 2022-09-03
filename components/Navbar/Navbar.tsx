@@ -13,16 +13,16 @@ function Navbar(props) {
   }
   return (
     <div className="relative bg-plantGreenLight py-8 drop-shadow-xl overflow-hidden pr-4">
-      <div className=" bg-[url('../assets/recyclingBG.jpg')] ml-[129px]  mt-[-30px] opacity-5 h-full w-full absolute "></div>
+      <div className=" bg-[url('../assets/recyclingBG.jpg')] lg:ml-[129px] mt-[-32px] lg:mt-[-30px] opacity-5 h-full w-full absolute "></div>
 
       <Disclosure as="nav">
         {({ open }) => (
           <>
             <div className="mx-10 md:mx-16">
-              <div className="relative flex items-center justify-between h-16">
+              <div className="relative z-20 flex items-center justify-between h-16">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
-                  <Disclosure.Button className="inline-flex items-center justify-center pr-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <Disclosure.Button className="inline-flex items-center justify-center  rounded-md text-gray-400 hover:text-white hover:bg-plantGreen focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -75,7 +75,7 @@ function Navbar(props) {
               </div>
             </div>
             <Disclosure.Panel className="sm:hidden ">
-              <div className="px-2 pt-2 pb-3 space-y-1 ">
+              <div className="relative z-20 mx-7 px-2 pt-2 pb-3 space-y-1 ">
                 {navigation.map((item) => (
                   <Disclosure.Button
                     key={item.name}
@@ -83,7 +83,7 @@ function Navbar(props) {
                     href={item.href}
                     className={classNames(
                       item.name === props.page
-                        ? "hover:bg-gray-300 text-gray-700 w-[30%] border border-t-0 border-l-0 border-r-0 border-b-4 border-plantGreen"
+                        ? "hover:bg-gray-300 text-gray-700  border border-t-0 border-l-0 border-r-0 border-b-4 border-plantGreen"
                         : "text-gray-400 hover:bg-gray-300 hover:text-gray-700",
                       "block px-3 py-2 text-base font-medium hover:scale-105 transition duration-200 ease-in-out"
                     )}

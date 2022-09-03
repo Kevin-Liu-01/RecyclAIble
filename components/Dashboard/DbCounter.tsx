@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 function DbCounter(props) {
   return (
     <div className="col-span-6 lg:col-span-2 relative flex justify-center  bg-gradient-to-b to-plantGreenDark from-plantGreen rounded-3xl  drop-shadow-lg  overflow-hidden ">
-      <div className=" bg-[url('../assets/recycling.jpg')] bg-cover opacity-20 h-full w-full absolute "></div>
+      <div className=" bg-[url('../assets/recycling.jpg')] bg-contain opacity-20 h-full w-full absolute "></div>
 
       <div className="justify-center mx-auto z-10">
         <div className="mx-4 px-4 text-3xl leading-8 font-extrabold tracking-tight text-plantGreenLight sm:text-4xl text-center mt-12 ">

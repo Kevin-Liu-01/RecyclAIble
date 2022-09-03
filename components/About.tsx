@@ -4,7 +4,7 @@ import React from "react";
 
 function About() {
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen bg-gradient-to-b to-plantGreenDarker from-plantGreenDark ">
       {/*header section*/}
 
       <div className="bg-white  items-center">
@@ -14,12 +14,12 @@ function About() {
       </div>
       {/*header section 2*/}
 
-      <div className=" bg-gradient-to-b to-plantGreenDarker from-plantGreenDark  pb-12 ">
+      <div className="  pb-12 ">
         <div className="mx-10 md:mx-16">
           <div className="pt-8">
             <h2 className="text-lg font-semibold text-plantGreen">About Us</h2>
             <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-plantGreenLighter sm:text-4xl">
-              Our Mission
+              The Team
             </p>
             <p className="mt-4 max-w-5xl text-xl text-plantGreenLight ">
               To be determined.

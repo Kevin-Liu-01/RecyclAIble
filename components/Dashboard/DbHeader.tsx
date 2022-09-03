@@ -7,7 +7,7 @@ function HeaderContents(props) {
 
       <div className="flex flex-col justify-center z-10">
         <div className="relative z-20 text-opacity-90 text-4xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-5xl text-center mt-8 lg:mt-16 select-none  mx-8">
-          Welcome to RecycleVision AI!
+          Welcome to RecycleAI!
         </div>
         <div className="grid mb-9 grid-rows-3 lg:grid-rows-2 grid-cols-2 gap-4">
           {/* Progress Bar*/}

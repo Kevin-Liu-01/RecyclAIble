@@ -25,7 +25,7 @@ function Home() {
   };
   useEffect(() => {
     axios
-      .get("http://ccd4-128-91-56-203.ngrok.io/sendUIdata")
+      .get("https://402c-128-91-56-203.ngrok.io/sendUIdata")
       .then((response) => {
         console.log(`/client/ returned response from host: `, response.data);
         setData(response.data);

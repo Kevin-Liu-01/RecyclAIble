@@ -13,13 +13,13 @@ function Navbar(props) {
     return classes.filter(Boolean).join(" ");
   }
   return (
-    <div className="relative bg-plantGreenLight py-8 drop-shadow-xl overflow-hidden pr-4">
-      <div className=" bg-[url('../assets/recyclingBG.jpg')] lg:ml-[129px] mt-[-32px] lg:mt-[-30px] opacity-5 h-full w-full absolute "></div>
-
+    <div className="relative bg-plantGreenLight py-8 drop-shadow-xl overflow-hidden ">
       <Disclosure as="nav">
         {({ open }) => (
           <>
             <div className="mx-10 md:mx-16">
+              <div className=" bg-[url('../assets/recyclingBG.jpg')] lg:block hidden lg:mx-[-2.5rem] mt-[-32px] lg:mt-[-30px] opacity-5 h-full w-full absolute "></div>
+
               <div className="relative z-20 flex items-center justify-between h-16">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
@@ -40,7 +40,7 @@ function Navbar(props) {
                       alt="RecycleLogo"
                       // height="16"
                       // width="16"
-                      className="hidden lg:block h-16 w-auto hover:scale-105 transition duration-200 ease-in-out"
+                      className="hidden md:block h-16 w-auto hover:scale-105 transition duration-200 ease-in-out"
                     ></img>
                     {/*logo end*/}
 
@@ -50,7 +50,7 @@ function Navbar(props) {
                       alt="RecycleLogo"
                       // height="16"
                       // width="16"
-                      className="block lg:hidden h-12 w-auto hover:scale-105 transition duration-200 ease-in-out"
+                      className="block md:hidden h-12 pl-0 lg:pl-4 w-auto hover:scale-105 transition duration-200 ease-in-out"
                     ></img>
                     {/*logo end*/}
                   </a>

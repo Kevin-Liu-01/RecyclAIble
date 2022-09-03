@@ -5,6 +5,7 @@ import DBCounter from "./DbCounter";
 import DBPIE from "./DbPIE";
 import DBMetrics from "./DbMetrics";
 import DbLast from "./DbLastItem";
+import jQuery from "jquery";
 
 import React from "react";
 import { useState, useEffect } from "react";
@@ -24,17 +25,24 @@ function Home() {
       "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
     },
   };
-  useEffect(() => {
-    axios
-      .get("https://9f02-128-91-56-203.ngrok.io/sendUIdata")
-      .then((response) => {
-        console.log(`/client/ returned response from host: `, response.data);
-        setData(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, []);
+
+  // useEffect(() => {
+  //   function postData(input) {
+  //     $.ajax({
+  //       type: "POST",
+  //       url: "/server.py",
+  //       data: { param: input },
+  //       success: callbackFunc,
+  //     });
+  //   }
+
+  //   function callbackFunc(response) {
+  //     console.log(response);
+  //     setData(response);
+  //   }
+
+  //   postData("");
+  // }, []);
   return (
     <div className="min-h-screen bg-gradient-to-b to-plantGreenDarker from-plantGreenMidDark  pb-14 ">
       {/*Navbar*/}

@@ -1,7 +1,7 @@
 import React from "react";
 import { PieChart } from "react-minimal-pie-chart";
 
-function DbCounter() {
+function DbCounter(props) {
   return (
     <div className="col-span-3 relative flex justify-center  bg-gradient-to-b to-plantGreenDark from-plantGreen rounded-2xl  drop-shadow-lg  overflow-hidden ">
       <div className=" bg-[url('../assets/recyclables.jpg')] bg-cover opacity-20 h-full w-full absolute "></div>
@@ -21,18 +21,18 @@ function DbCounter() {
               className="font-extrabold text-md"
               labelStyle={{
                 fontSize: "10px",
-                color: "red",
+                fill: "black",
               }}
               data={[
                 {
                   title: "Recycled",
-                  value: 45,
+                  value: props.recycled,
                   color: "#E38627",
                 },
                 {
                   title: "Disposed",
 
-                  value: 75,
+                  value: props.disposed,
                   color: "#C13C37",
                 },
               ]}

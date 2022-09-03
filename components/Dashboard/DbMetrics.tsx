@@ -1,7 +1,8 @@
+import { truncate } from "fs";
 import React from "react";
 import CountUp from "react-countup";
 
-function DbCounter() {
+function DbCounter(props) {
   return (
     <div className="col-span-3 relative flex justify-center  bg-gradient-to-b to-plantGreenDark from-plantGreen rounded-2xl  drop-shadow-lg  overflow-hidden ">
       <div className=" bg-[url('../assets/recyclingcontainer.jpg')] bg-cover opacity-20 h-full w-full absolute "></div>
@@ -53,7 +54,7 @@ function DbCounter() {
           <div className="col-span-6 my-4 text-2xl md:text-4xl">
             You recycled{" "}
             <div className="relative z-20 text-3xl md:text-5xl inline text-white">
-              75%
+              {Math.trunc((props.recycled / 2072) * 100)}%
             </div>{" "}
             more than the average American.{" "}
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function HeaderContents() {
+function HeaderContents(props) {
   return (
     <div className="col-span-4 drop-shadow-lg  bg-gradient-to-b to-plantGreenDark from-plantGreen  rounded-2xl   overflow-hidden">
       <div className=" bg-[url('../assets/forest.jpg')] bg-cover opacity-20 h-full w-full absolute "></div>
@@ -13,11 +13,11 @@ function HeaderContents() {
           {/* Progress Bar*/}
           <div className="col-span-2 text-center mb-9 mx-8 relative rounded-full  mt-9 drop-shadow-lg text-plantGreenLight   leading-8 font-bold tracking-tight  bg-plantGreenDarker border-4 border-plantGreenLight overflow-hidden">
             <div
-              style={{ width: "45%" }}
+              style={{ width: props.recycled.toString() + "%" }}
               className="bg-blue-600 rounded-full z-10 flex place-content-center bg-[url('../assets/water.jpg')] bg-cover opacity-60 h-full w-full absolute "
             ></div>
             <div className="text-2xl font-bold py-3 relative z-20 text-white">
-              45/100 Items Recycled
+              {props.recycled}/100 Items Recycled
             </div>
           </div>
           {/* other stats*/}
@@ -28,7 +28,9 @@ function HeaderContents() {
               <div className="text-3xl font-extrabold mt-2">
                 Items Recycled:
               </div>
-              <div className="text-4xl font-extrabold  mb-2 text-white">45</div>
+              <div className="text-4xl font-extrabold  mb-2 text-white">
+                {props.recycled}
+              </div>
             </div>
           </div>
           <div className="col-span-1 border-plantGreenLight border-4 mr-8 drop-shadow-lg  bg-gradient-to-b to-plantGreenDark from-plantGreen rounded-2xl">
@@ -38,7 +40,9 @@ function HeaderContents() {
               <div className="text-3xl font-extrabold mt-2 ">
                 Items Disposed:
               </div>
-              <div className="text-4xl font-extrabold mb-2 text-white">425</div>
+              <div className="text-4xl font-extrabold mb-2 text-white">
+                {props.disposed}
+              </div>
             </div>
           </div>
         </div>

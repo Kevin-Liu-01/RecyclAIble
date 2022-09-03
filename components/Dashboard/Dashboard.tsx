@@ -9,7 +9,6 @@ import { useState } from "react";
 function Home() {
   const [itemsRecycled, setItemsRecycled] = useState(75);
   const [itemsDisposed, setItemsDisposed] = useState(88);
-  const [weight, setWeight] = useState(45);
 
   return (
     <div className="min-h-screen bg-gradient-to-b to-plantGreenDarker from-plantGreenDark  pb-14 ">
@@ -19,21 +18,16 @@ function Home() {
 
       <div className="p-10 md:p-16  grid grid-cols-6 gap-4">
         {/*header section */}
-        <DBHeader />
+        <DBHeader recycled={itemsRecycled} disposed={itemsDisposed} />
 
         {/* Counter block */}
-        <DBCounter />
+        <DBCounter recycled={itemsRecycled} disposed={itemsDisposed} />
 
         {/* To be named */}
-        <DBPIE
-          rates={[
-            { title: "Recycled", value: 50 },
-            { title: "Disposed", value: 75 },
-          ]}
-        />
+        <DBPIE recycled={itemsRecycled} disposed={itemsDisposed} />
 
         {/* To be named */}
-        <DBMetrics />
+        <DBMetrics recycled={itemsRecycled} disposed={itemsDisposed} />
       </div>
     </div>
   );

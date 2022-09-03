@@ -16,7 +16,7 @@ function Navbar(props) {
     return classes.filter(Boolean).join(" ");
   }
   return (
-    <div className="bg-plantGreenLight py-8 drop-shadow-xl overflow-hidden">
+    <div className="relative bg-plantGreenLight py-8 drop-shadow-xl overflow-hidden pr-4">
       <div className=" bg-[url('../assets/recyclingBG.jpg')] ml-[129px]  mt-[-30px] opacity-5 h-full w-full absolute "></div>
 
       <Disclosure as="nav">

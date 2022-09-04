@@ -7,7 +7,7 @@ function HeaderContents(props) {
 
       <div className="flex flex-col justify-center z-10">
         <div className="relative inline z-20 text-opacity-[0.68] text-4xl leading-8 font-extrabold tracking-tight text-black sm:text-5xl text-center mt-8 lg:mt-16 select-none  mx-8">
-          Welcome to
+          Welcome <div className="inline text-3xl"> to </div>
           <img
             src="https://cdn.discordapp.com/attachments/999004614693236856/1015766458728468480/recyclaible.png"
             alt="RecycleLogo"

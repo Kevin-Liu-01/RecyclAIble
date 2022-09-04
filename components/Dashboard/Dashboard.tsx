@@ -12,26 +12,27 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Home() {
-  const [itemsRecycled, setItemsRecycled] = useState(11);
-  const [itemsDisposed, setItemsDisposed] = useState(3);
-  const [data, setData] = useState([
-    [1, "bottle", "yes"],
-    [2, "can", "yes"],
-    [3, "hat", "yesy"],
-  ]);
+  const [itemsRecycled, setItemsRecycled] = useState(0);
+  const [itemsDisposed, setItemsDisposed] = useState(0);
+  const [dataArrays, setData] = useState([[]]);
   const config = {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+      "ngrok-skip-browser-warning": "true",
     },
   };
 
   useEffect(() => {
     axios
-      .get("https://4bcb-128-91-56-203.ngrok.io/sendUIdata", config)
+      .get("https://c37d-128-91-19-1.ngrok.io/sendUIdata", config)
       .then((response) => {
+        console.log("successful retreival");
         console.log(`/client/ returned response from host: `, response.data);
         setData(response.data);
+        console.log("the data: ", dataArrays);
+        setItemsRecycled(dataArrays.filter((x) => x.includes("yes")).length);
+        setItemsDisposed(dataArrays.filter((x) => x.includes("no")).length);
       })
       .catch(function (error) {
         console.log(error);
@@ -51,7 +52,11 @@ function Home() {
         {/* Counter block */}
         <DBCounter recycled={itemsRecycled} disposed={itemsDisposed} />
 
-        <DbLast data={data} recycled={itemsRecycled} disposed={itemsDisposed} />
+        <DbLast
+          data={dataArrays}
+          recycled={itemsRecycled}
+          disposed={itemsDisposed}
+        />
         {/* To be named */}
         <DBPIE recycled={itemsRecycled} disposed={itemsDisposed} />
 

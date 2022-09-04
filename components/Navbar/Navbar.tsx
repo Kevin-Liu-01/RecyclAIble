@@ -4,7 +4,7 @@ import React from "react";
 
 const navigation = [
   { name: "Dashboard", href: "/" },
-  { name: "About", href: "/about" },
+  // { name: "About", href: "/about" },
 ];
 
 function Navbar(props) {

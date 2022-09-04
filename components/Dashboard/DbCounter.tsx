@@ -8,7 +8,7 @@ function DbCounter(props) {
 
       <div className="justify-center mx-auto z-10">
         <div className="mx-4 px-4 text-3xl leading-8 font-extrabold tracking-tight text-plantGreenLight sm:text-4xl text-center mt-12 ">
-          How many items have you thrown away?
+          How many items have you disposed?
         </div>
         <div className="px-4 mb-9 relative flex mx-auto justify-center mt-9 drop-shadow-lg text-plantGreenLight h-48 w-48 lg:h-64 lg:w-64 text-2xl lg:text-4xl leading-8 font-bold tracking-tight  bg-plantGreen border-4 border-plantGreenLight rounded-[50%] overflow-hidden">
           <div className="flex place-content-center bg-[url('../assets/trashcan.jpg')] bg-cover opacity-30 h-full w-full absolute "></div>

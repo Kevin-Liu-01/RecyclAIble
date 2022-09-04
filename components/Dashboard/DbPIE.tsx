@@ -20,7 +20,7 @@ function DbCounter(props) {
               }}
               className="font-extrabold text-xl"
               labelStyle={{
-                fontSize: "8px",
+                fontSize: "6px",
                 fill: "black",
               }}
               data={[
@@ -36,7 +36,7 @@ function DbCounter(props) {
                 },
                 {
                   title:
-                    "Disposed: " +
+                    "Trashed: " +
                     Math.trunc(
                       (props.disposed / (props.recycled + props.disposed)) * 100
                     ) +

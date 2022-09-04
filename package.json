@@ -17,6 +17,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "chart.js": "^3.7.1",
+    "child_process": "^1.0.2",
     "flowbite": "^1.5.3",
     "flowbite-react": "^0.1.10",
     "heroicons": "^1.0.5",
@@ -24,6 +25,9 @@
     "next": "12.1.4",
     "next-auth": "^4.3.4",
     "pdfobject": "^2.2.8",
+    "py-loader": "^0.3.1",
+    "python": "^0.0.4",
+    "python-webpack-loader": "^1.0.1",
     "react": "18.0.0",
     "react-chartjs-2": "^4.1.0",
     "react-countup": "^6.3.1",
@@ -46,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.14",
     "@types/node": "^18.7.14",
     "autoprefixer": "^10.4.4",
     "eslint": "8.12.0",

@@ -39,7 +39,7 @@ function HeaderContents(props) {
 
             <div className="relative mb-6 z-20 text-plantGreenLight px-4 lg:pt-4 text-center grid grid-rows-2 gap-2">
               <div className="text-3xl font-extrabold mt-2 ">
-                Items Disposed:
+                Items Trashed:
               </div>
               <div className="text-5xl font-extrabold text-white">
                 {props.disposed}

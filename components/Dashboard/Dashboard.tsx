@@ -7,7 +7,7 @@ import DbLast from "./DbLastItem";
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-const server = "ff5b";
+const server = "90e8";
 
 function Home() {
   const [itemsRecycled, setItemsRecycled] = useState(0);

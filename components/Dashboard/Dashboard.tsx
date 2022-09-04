@@ -7,7 +7,7 @@ import DbLast from "./DbLastItem";
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-const server = "85b2";
+const server = "ff5b";
 
 function Home() {
   const [itemsRecycled, setItemsRecycled] = useState(0);
@@ -43,7 +43,7 @@ function Home() {
       {/*Navbar*/}
       <Navbar page="Dashboard" />
       {/*Dashboard */}
-      <div className="py-10 px-7 md:px-16 md:pb-16 grid grid-cols-6 gap-5">
+      <div className="py-10 px-7 md:px-16 md:pb-16 grid grid-cols-6 gap-[1.35rem]">
         {/*header section */}
         <DBHeader recycled={itemsRecycled} disposed={itemsDisposed} />
 

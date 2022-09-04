@@ -12,12 +12,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Home() {
-  const [itemsRecycled, setItemsRecycled] = useState(74);
-  const [itemsDisposed, setItemsDisposed] = useState(88);
+  const [itemsRecycled, setItemsRecycled] = useState(11);
+  const [itemsDisposed, setItemsDisposed] = useState(3);
   const [data, setData] = useState([
     [1, "bottle", "yes"],
     [2, "can", "yes"],
-    [3, "hat", "no"],
+    [3, "hat", "yes"],
   ]);
   const config = {
     headers: {

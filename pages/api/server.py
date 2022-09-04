@@ -5,7 +5,7 @@ import requests
 
 def output():
     # sending get request and saving the response as response object
-    r = requests.get("http://9d6c-128-91-56-203.ngrok.io/sendUIdata")
+    r = requests.get("http://XXXX-XXX-XX-XX-XXX.ngrok.io/sendUIdata")
     
     # extracting data in json format
     # data = r.json()

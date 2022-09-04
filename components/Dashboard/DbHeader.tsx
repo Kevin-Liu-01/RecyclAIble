@@ -2,18 +2,16 @@ import React from "react";
 
 function HeaderContents(props) {
   return (
-    <div className="col-span-6 lg:col-span-4 drop-shadow-lg  bg-gradient-to-b to-plantGreenDark from-plantGreen  rounded-3xl   overflow-hidden">
+    <div className="col-span-6 lg:col-span-4 drop-shadow-lg  bg-gradient-to-b from-plantGreen to-plantGreenMidDark  rounded-3xl   overflow-hidden">
       <div className=" bg-[url('../assets/forest.jpg')] bg-cover opacity-[0.25] h-full w-full absolute "></div>
 
       <div className="flex flex-col justify-center z-10">
         <div className="relative inline z-20 text-opacity-[0.68] text-4xl leading-8 font-extrabold tracking-tight text-black sm:text-5xl text-center mt-8 lg:mt-16 select-none  mx-8">
-          Welcome <div className="inline text-3xl"> to </div>
+          Welcome <div className="inline text-4xl mx-[0.28rem]"> to </div>
           <img
             src="https://cdn.discordapp.com/attachments/999004614693236856/1015766458728468480/recyclaible.png"
             alt="RecycleLogo"
-            // height="16"
-            // width="16"
-            className="hidden ml-[0.78rem] pb-[0.23rem] md:inline h-[4rem] w-auto relative z-20"
+            className="hidden pb-[0.23rem] md:inline h-[4rem] w-auto relative z-20"
           ></img>
           <div className="sm:text-5xl inline text-center text-4xl leading-8 font-extrabold tracking-tight">
             <div className="md:hidden sm:text-5xl inline text-center text-4xl leading-8 font-extrabold tracking-tight">
@@ -30,7 +28,11 @@ function HeaderContents(props) {
             className="rounded-full z-10 flex place-content-center bg-[url('../assets/water.jpg')] bg-cover opacity-60 h-full w-full absolute "
           ></div>
           <div className="text-2xl font-bold py-[0.875rem] relative z-20 text-white">
-            {props.recycled}/100 Items Recycled
+            Goal:{" "}
+            <div className="text-2xl font-bold text-plantGreenLight inline">
+              {props.recycled}
+            </div>
+            /100 Items Recycled
           </div>
         </div>
         <div className="grid mb-9 grid-rows-2 lg:grid-rows-1 grid-cols-2 gap-4">

@@ -1,20 +1,20 @@
-import { ClockIcon, UserIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Navbar from "../Navbar/Navbar";
 import DBHeader from "./DbHeader";
 import DBCounter from "./DbCounter";
 import DBPIE from "./DbPIE";
 import DBMetrics from "./DbMetrics";
 import DbLast from "./DbLastItem";
-// import jQuery from "jquery";
-
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+const server = "85b2";
 
 function Home() {
   const [itemsRecycled, setItemsRecycled] = useState(0);
   const [itemsDisposed, setItemsDisposed] = useState(0);
   const [dataArrays, setData] = useState([[]]);
+  const [update, setUpdate] = useState(false);
+
   const config = {
     headers: {
       "Access-Control-Allow-Origin": "*",
@@ -25,27 +25,25 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("https://c37d-128-91-19-1.ngrok.io/sendUIdata", config)
+      .get(`https://${server}-128-91-19-1.ngrok.io/sendUIdata`, config)
       .then((response) => {
-        console.log("successful retreival");
         console.log(`/client/ returned response from host: `, response.data);
+        setItemsRecycled(response.data.filter((x) => x.includes("yes")).length);
+        setItemsDisposed(response.data.filter((x) => x.includes("no")).length);
         setData(response.data);
         console.log("the data: ", dataArrays);
-        setItemsRecycled(dataArrays.filter((x) => x.includes("yes")).length);
-        setItemsDisposed(dataArrays.filter((x) => x.includes("no")).length);
       })
       .catch(function (error) {
         console.log(error);
       });
-  }, []);
+  }, [update]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b to-plantGreenDarker from-plantGreenMidDark  pb-14 ">
       {/*Navbar*/}
       <Navbar page="Dashboard" />
       {/*Dashboard */}
-
-      <div className="py-10 px-7 md:px-16 md:py-16 grid grid-cols-6 gap-5">
+      <div className="py-10 px-7 md:px-16 md:pb-16 grid grid-cols-6 gap-5">
         {/*header section */}
         <DBHeader recycled={itemsRecycled} disposed={itemsDisposed} />
 
@@ -56,6 +54,8 @@ function Home() {
           data={dataArrays}
           recycled={itemsRecycled}
           disposed={itemsDisposed}
+          update={update}
+          setUpdate={setUpdate}
         />
         {/* To be named */}
         <DBPIE recycled={itemsRecycled} disposed={itemsDisposed} />

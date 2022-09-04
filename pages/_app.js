@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     <SessionProvider session={session}>
       <Head>
         {" "}
-        <title>RecycleAI</title>
+        <title>RecyclAIble</title>
       </Head>
       <noscript>You need to enable JavaScript to run this app.</noscript>
 

@@ -5,7 +5,7 @@ export default function Document() {
       <Head>
         <meta charset="utf-8" />
 
-        <meta name="description" content="Frontend section of RECYCLaiBLE" />
+        <meta name="description" content="Frontend section of RecyclAIble" />
 
         <link rel="apple-touch-icon" href="./favicon.png" />
         {/*

@@ -7,7 +7,7 @@ import DbLast from "./DbLastItem";
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-const server = "90e8";
+const server = "90ea";
 
 function Home() {
   const [itemsRecycled, setItemsRecycled] = useState(0);
@@ -25,7 +25,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get(`https://${server}-128-91-19-1.ngrok.io/sendUIdata`, config)
+      .get(`https://${server}-128-91-19-21.ngrok.io/sendUIdata`, config)
       .then((response) => {
         console.log(`/client/ returned response from host: `, response.data);
         setItemsRecycled(response.data.filter((x) => x.includes("yes")).length);

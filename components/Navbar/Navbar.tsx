@@ -4,7 +4,10 @@ import React from "react";
 
 const navigation = [
   { name: "Dashboard", href: "/" },
-  // { name: "About", href: "/about" },
+  {
+    name: "Our Devpost",
+    href: "https://devpost.com/software/recycleai-v1dqz5?ref_content=user-portfolio&ref_feature=in_progress",
+  },
 ];
 
 function Navbar(props) {

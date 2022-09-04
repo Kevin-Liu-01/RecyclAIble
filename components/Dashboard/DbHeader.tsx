@@ -6,8 +6,22 @@ function HeaderContents(props) {
       <div className=" bg-[url('../assets/forest.jpg')] bg-cover opacity-[0.25] h-full w-full absolute "></div>
 
       <div className="flex flex-col justify-center z-10">
-        <div className="relative z-20 text-opacity-90 text-4xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-5xl text-center mt-8 lg:mt-16 select-none  mx-8">
-          Welcome to RecycleAI!
+        <div className="relative inline z-20 text-opacity-[0.68] text-4xl leading-8 font-extrabold tracking-tight text-black sm:text-5xl text-center mt-8 lg:mt-16 select-none  mx-8">
+          Welcome to
+          <img
+            src="https://cdn.discordapp.com/attachments/999004614693236856/1015766458728468480/recyclaible.png"
+            alt="RecycleLogo"
+            // height="16"
+            // width="16"
+            className="hidden ml-[0.78rem] pb-[0.23rem] md:inline h-[4rem] w-auto relative z-20"
+          ></img>
+          <div className="sm:text-5xl inline text-center text-4xl leading-8 font-extrabold tracking-tight">
+            <div className="md:hidden sm:text-5xl inline text-center text-4xl leading-8 font-extrabold tracking-tight">
+              {" "}
+              RecyclAIble
+            </div>
+            !
+          </div>
         </div>
         {/* Progress Bar*/}
         <div className="col-span-2 text-center mb-14 lg:mb-9 lg:mx-8 mx-6 relative rounded-full  mt-9 drop-shadow-lg text-plantGreenLight   leading-8 font-bold tracking-tight  bg-plantGreenDarker border-4 border-plantGreenLight overflow-hidden">

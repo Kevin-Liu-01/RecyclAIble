@@ -17,7 +17,7 @@ function Home() {
   const [data, setData] = useState([
     [1, "bottle", "yes"],
     [2, "can", "yes"],
-    [3, "hat", "yes"],
+    [3, "hat", "yesy"],
   ]);
   const config = {
     headers: {
@@ -26,23 +26,18 @@ function Home() {
     },
   };
 
-  // useEffect(() => {
-  //   function postData(input) {
-  //     $.ajax({
-  //       type: "POST",
-  //       url: "/server.py",
-  //       data: { param: input },
-  //       success: callbackFunc,
-  //     });
-  //   }
+  useEffect(() => {
+    axios
+      .get("https://4bcb-128-91-56-203.ngrok.io/sendUIdata", config)
+      .then((response) => {
+        console.log(`/client/ returned response from host: `, response.data);
+        setData(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
 
-  //   function callbackFunc(response) {
-  //     console.log(response);
-  //     setData(response);
-  //   }
-
-  //   postData("");
-  // }, []);
   return (
     <div className="min-h-screen bg-gradient-to-b to-plantGreenDarker from-plantGreenMidDark  pb-14 ">
       {/*Navbar*/}

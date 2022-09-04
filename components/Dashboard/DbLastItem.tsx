@@ -27,7 +27,7 @@ function DbLast(props) {
         >
           <div
             className={
-              lastElement[2] == "yes"
+              lastElement[1] == "yes"
                 ? "flex place-content-center bg-[url('../assets/recyclingcontainer.jpg')] bg-cover opacity-30 h-full w-full absolute "
                 : "flex place-content-center bg-[url('../assets/disposed.jpg')] bg-cover opacity-30 h-full w-full absolute "
             }

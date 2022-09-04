@@ -1,4 +1,4 @@
-This repository contains the code for the frontend section of TrashVISION.
+This repository contains the code for the frontend section of RecyclAIble.
 
 Created using [Next.js](https://nextjs.org/).
 
